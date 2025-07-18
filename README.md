@@ -60,3 +60,4 @@ CANShield/
 ## 📜 License
 
 MIT License
+<img width="878" height="407" alt="image" src="https://github.com/user-attachments/assets/78f53479-1098-447b-baeb-42827d5bd7e7" />
