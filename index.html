@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANShield: Intrusion Detection System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>CANShield</h1>
+                <p class="tagline">Real-Time CAN Bus Intrusion Detection</p>
+                <button class="toggle-btn" id="toggle-btn">☰</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="dashboard">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metrics-card">
+                        <h3>Total Predictions</h3>
+                        <p id="total-predictions">0</p>
+                        <span class="change">+0%</span>
+                    </div>
+                    <div class="metrics-card">
+                        <h3>Attack Count</h3>
+                        <p id="attack-count">0</p>
+                        <span class="change attack-change">+0%</span>
+                    </div>
+                    <div class="metrics-card">
+                        <h3>Accuracy</h3>
+                        <p id="accuracy">95%</p>
+                        <span class="change">+0%</span>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="upload-panel">
+                        <h2>Secure the CAN Bus</h2>
+                        <p>Upload a CAN log file (.csv) to detect intrusions in real-time.</p>
+                        <form id="upload-form" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="file">Upload CAN Log File (.csv):</label>
+                                <input type="file" id="file" name="file" accept=".csv" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Analyze File</button>
+                        </form>
+                    </div>
+                    <div class="results-panel">
+                        <h3>Analysis Results</h3>
+                        <div id="result" class="result">
+                            <div class="chart-container">
+                                <canvas id="predictionPieChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="probabilityBarChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="trendLineChart" width="400" height="400"></canvas>
+                            </div>
+
+                            <!-- <div class="chart-container">
+                                <canvas id="predictionPieChart"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="probabilityBarChart"></canvas>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="trendLineChart"></canvas>
+                            </div>
+                            <button id="toggleTable" class="btn-secondary">Show Raw Data</button>
+                            <div id="rawDataTable" class="raw-data" style="display: none;"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About CANShield</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Why We Made This</h3>
+                        <p>
+                            Modern vehicles rely on the Controller Area Network (CAN) bus for critical communication. 
+                            CANShield protects against cyberattacks like spoofing, fuzzing, and DoS, ensuring safer vehicles.
+                        </p>
+                        <h3>Why We Use This</h3>
+                        <p>
+                            CANShield uses a Random Forest classifier trained on diverse CAN bus datasets for high-accuracy anomaly detection. 
+                            Its web interface enables real-time intrusion detection for cybersecurity professionals.
+                        </p>
+                    </div>
+                    <div class="about-images">
+                        <h3>Learn More</h3>
+                        <div class="image-grid">
+                            <div class="image-item">
+                                <!-- <img src="https://images.unsplash.com/photo-1516321310768-61c5e24d9623?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="CAN Bus Security"> -->
+                                <img src="assets/CAN_BIS.jpg" alt="CAN Bus Security">
+                                <p>CAN Bus Security</p>
+                            </div>
+                            <div class="image-item">
+                                <!-- <img src="https://images.unsplash.com/photo-1507146150940-2b5f258d7665?ixlib=rb-4.0.3&auto=format&fit=crop&w=250&q=80" alt="Machine Learning Model"> -->
+                                <img src="assets/images.jpeg" alt="Machine Learning Model">
+                                <p>Machine Learning Model</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Questions or feedback? Email <a href="mailto:nasirsharifqasoori786@gmail.com">nasirsharifqasoori786@gmail.com</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 CANShield. Developed by Nasir Sharif, Cybersecurity Enthusiast.</p>
+            <p><a href="https://github.com/Nasir-Sharif">GitHub</a> | <a href="https://www.linkedin.com/in/nasir-sharif-b1744124b/overlay/contact-info/">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

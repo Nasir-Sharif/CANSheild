@@ -1,0 +1,10 @@
+flask
+pandas
+scikit-learn
+joblib
+numpy
+matplotlib        # (optional, for model evaluation or visualizations)
+xgboost           # (optional, if you want to test with XGBoost)
+lightgbm          # (optional, alternative ML model)
+openpyxl          # (optional, if reading/writing Excel files)
+python-dotenv     # (optional, for managing config variables securely)
